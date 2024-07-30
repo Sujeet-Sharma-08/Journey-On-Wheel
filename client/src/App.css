@@ -1,0 +1,19 @@
+.nav a.active{
+    color: #5eadf5;
+    font-weight: 700;
+    margin-left: 3rem;
+    transition: all;
+    animation: duration 10s;
+}
+
+p a.active{
+    color: #5eadf5;
+    padding-top: 0.5rem;
+    padding-bottom:0.5rem ;
+    border-radius: 0.5rem;
+    padding-left: 2px;
+    padding-right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(94, 173, 245, 0.20);  
+}
+
