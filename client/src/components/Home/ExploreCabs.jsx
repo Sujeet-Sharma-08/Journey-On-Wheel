@@ -1,20 +1,34 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ExploreCabs = () => {
+  const [activeDiv, setActiveDiv] = useState(null);
+
+  const handleDivClick = (index) => {
+    setActiveDiv(index);
+  };
+
   return (
     <div className="flex flex-col ml-2 mr-2 mt-10 sm:mt-[9.8rem]">
       <div className="w-10/12 mx-auto flex flex-col justify-center bg-[#F4F5F0] items-center border-2  mb-5 rounded-3xl shadow-2xl border-black p-5">
-        <div className="flex justify-center items-center py-1 gap-2 border-2 px-2 border-black rounded-[1.25rem] shadow-2xl bg-[#D9D9D9]">
-          <NavLink to={'/'} className="text-[11px] sm:text-[1rem] font-semibold text-black leading-3 not-italic px-3 py-2 border-r-2 border-black">
-            ROUND TRIP
-          </NavLink>
-          <NavLink to={'/'} className="text-[11px] sm:text-[1rem] font-semibold text-black leading-3 not-italic px-3 py-2 border-r-2 border-black">
-            LOCAL
-          </NavLink>
-          <NavLink to={'/'} className="text-[11px] sm:text-[1rem] font-semibold text-black leading-3 not-italic px-3 py-2">
-            AIRPORT
-          </NavLink>
+        <div className="flex justify-center items-center gap-2 border-2 rounded-md  border-black shadow-2xl ">
+          <div className="container w-[27rem]  flex mx-auto">
+            {["AROUND TRIP", "LOCAL", "AIRPORT"].map((divContent, index) => (
+              <div key={index} className="">
+                <div
+                  className={`py-2 w-[9rem] hover:cursor-pointer border-r-2 text-center font-semibold border-black ${
+                    activeDiv === index
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-200"
+                  }`}
+                  onClick={() => handleDivClick(index)}
+                >
+                  {divContent}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col sm:grid sm:grid-cols-4 gap-5 mt-10 mb-10 w-full">
@@ -65,9 +79,12 @@ const ExploreCabs = () => {
       </div>
 
       <div className="flex justify-center -mt-12 mb-10  ">
-        <button className="bg-[#5eadf5] rounded-lg  border-2 border-black bg- h-14 w-[14rem] hover:scale-105 transition duration-300 text-xl font-bold">
+        <Link
+          to={"/exploremore"}
+          className="bg-[#5eadf5] rounded-lg text-center py-3 border-2 border-black bg- h-14 w-[14rem] hover:scale-105 transition duration-300 text-xl font-bold"
+        >
           EXPLORE CABS
-        </button>
+        </Link>
       </div>
     </div>
   );
