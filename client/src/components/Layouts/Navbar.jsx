@@ -96,12 +96,12 @@ const Navbar = () => {
 
       <div className="absolute w-full">
         {nav && (
-          <div className="relative flex w-full h-[70vh]  bg-[#000000] ">
-            <div className="flex h-[20rem] w-[20rem] -ml-24 rounded-full bg-[#261240] blur-sm  border-[#1d0d31] shadow-2xl"></div>
+          <div className="relative flex w-full h-[100vh] bg-[#000000]">
+            <div className="flex h-[30rem] w-[30rem] -ml-24 rounded-full bg-[#261240] blur-sm  border-[#1d0d31] shadow-2xl"></div>
 
-            <div className="nav absolute flex flex-col gap-1 sm:gap-5 mt-5">
+            <div className="nav absolute flex flex-col gap-5 sm:gap-8 mt-[5rem] ml-[5rem]">
               <NavLink
-                className="text-white font-bold  mt-10 ml-10 text-lg sm:text-xl"
+                className="text-white font-bold mt-10 ml-10 text-lg  sm:text-xl lg:text-3xl"
                 to={"/"}
               >
                 HOME
@@ -110,39 +110,39 @@ const Navbar = () => {
               <div className="flex">
                 <NavLink
                   onClick={subNavHandler}
-                  className="text-white flex font-bold  ml-10 text-lg sm:text-xl"
+                  className="text-white flex font-bold  ml-10 text-lg sm:text-xl lg:text-3xl"
                   to={"/services"}
                 >
                   <p>SERVICES</p>
-                  <div className=" -mt-[2px]">
+                  <div className=" -mt-[6px]">
                     {suvNav ? (
-                      <GoTriangleUp size={35} />
+                      <GoTriangleUp size={50} />
                     ) : (
-                      <GoTriangleRight size={35} />
+                      <GoTriangleRight size={50} />
                     )}
                   </div>
                 </NavLink>
               </div>
               <NavLink
-                className="text-white font-bold  ml-10 text-lg sm:text-xl"
+                className="text-white font-bold  ml-10 text-lg sm:text-xl lg:text-3xl"
                 to={"/contactus"}
               >
                 CONTACT US
               </NavLink>
 
               <NavLink
-                className="text-white font-bold  ml-10 text-lg sm:text-xl"
+                className="text-white font-bold  ml-10 text-lg sm:text-xl lg:text-3xl"
                 to={"/aboutus"}
               >
                 ABOUT US
               </NavLink>
             </div>
 
-            <div className="mt-[5.7rem] sm:mt-28 flex flex-col gap-3">
+            <div className="mt-[10rem] sm:mt-44 flex flex-col gap-3">
               {suvNav &&
                 navLinks.map((navlink) => {
                   return (
-                    <p className="px-2 text-white text-lg sm:text-xl  font-bold">
+                    <p className="px-2 text-white text-lg sm:text-xl lg:text-3xl font-bold">
                       <NavLink to={navlink.link} key={navlink.id}>
                         {navlink.text}
                       </NavLink>
@@ -151,24 +151,24 @@ const Navbar = () => {
                 })}
             </div>
 
-            <div className="flex overflow-hidden absolute right-0 bottom-0 gap-5   justify-end items-center">
-              <div className=" mix-blend-plus-lighter h-[5rem] w-[5rem] -mt-40  rounded-full bg-[#261240] blur-sm  border-[#1d0d31] shadow-2xl"></div>
-              <div className="">
-                <p className=" text-white">
-                  701-Lane no.12near <br /> Air india ,Marine Line <br />{" "}
+            <div className="flex overflow-hidden absolute right-0 mt-5 gap-5 justify-end items-center">
+              <div className="mix-blend-plus-lighter h-[5rem] w-[5rem] mt-5 rounded-full bg-[#261240] blur-sm  border-[#1d0d31] shadow-2xl"></div>
+              <div className="mt-[13rem] mr-5">
+                <p className=" text-white text-lg">
+                  701-Lane no.12near <br /> Air india ,Marine Line <br />
                   ,Mumbai,Maharashtra <br /> ,400010
                 </p>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <a className="text-white" href="tel:+91 8433700215">
+              <div className="flex flex-col gap-2 mr-20 mt-[25rem]">
+                <a className="text-white text-lg " href="tel:+91 8433700215">
                   +91 8433700215
                 </a>
-                <a className="text-white" href="mailto:tanul@unarrow.com">
+                <a className="text-white text-lg" href="mailto:tanul@unarrow.com">
                   tanul@unarrow.com
                 </a>
                 <div className="hidden sm:flex gap-5 text-3xl mt-2 text-black">
-                  <a className="text-white" href="#">
+                  <a className="text-white " href="#">
                     <FaWhatsapp />
                   </a>
                   <a className="text-white" href="#">
@@ -182,7 +182,7 @@ const Navbar = () => {
                   </a>
                 </div>
 
-                <div className="-mr-10 -mb-20 mix-blend-plus-lighter flex h-[14rem] w-[14rem]  rounded-full bg-[#261240] blur-sm  border-[#1d0d31] shadow-2xl"></div>
+                <div className="-mr-40 -mt-32 mix-blend-plus-lighter flex h-[20rem] w-[20rem] rounded-full bg-[#261240] blur-sm  border-[#1d0d31] shadow-2xl"></div>
               </div>
             </div>
           </div>

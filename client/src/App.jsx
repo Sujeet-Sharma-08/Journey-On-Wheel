@@ -9,6 +9,8 @@ import {Routes,Route} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Booking from './components/tour/Booking'
 import CarCollection from './components/Car Collection/CarCollection'
+import Contactus from './components/subNavBar/contactus'
+import Aboutus from './components/subNavBar/Aboutus'
 function App() {
   
   return (
@@ -18,6 +20,11 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/sign-up' element={<SignUp/>}></Route>
+
+        {/* sub navbar */}
+        <Route path='/contactus' element={<Contactus/>}></Route>
+        <Route path='/Aboutus' element={<Aboutus/>}></Route>
+       
 
         {/* select car */}
         <Route path='/exploremore' element={<CarCollection/>}></Route>
