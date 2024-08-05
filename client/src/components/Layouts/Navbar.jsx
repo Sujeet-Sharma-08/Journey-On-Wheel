@@ -47,32 +47,32 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full z-50 fixed ">
-      <div className="py-6 w-full bg-[#5eadf5] rounded-b-xl">
-        <div className="w-11/12 mx-auto">
-          <div className="flex flex-col sm:flex-row items-center justify-between">
-            <div className="flex bg-[#000000] px-2 py-2 rounded-md gap-2 -mt-3 ">
-              <div className="flex">
+    <div className="w-full z-50 fixed">
+      <div className="py-4 sm:py-5 md:py-7 w-full bg-[#5eadf5] rounded-b-xl">
+        <div className="w-full p-1 sm:w-11/12 mx-auto">
+          <div className="flex items-center text-xs sm:text-[1rem] justify-around md:justify-between">
+            <div className="flex mt-1 bg-[#000000] px-2 py-1 sm:py-2 rounded-md gap-1">
+              <div className="flex mx-auto">
                 <div className="flex bg-white rounded-md mx-auto">
-                  <p className="mt-1 text-lg">
+                  <p className="mt-1 text-lg sm:text-xl">
                     <IoIosCall />
                   </p>
-                  <p className="text-[#FF6D1F] px-1">24x7</p>
+                  <p className="text-[#FF6D1F] px-1 mt-[2px]">24x7</p>
                 </div>
               </div>
-              <p className="text-[#FFFFFF]">+91 8433700000</p>
+              <p className="text-[#FFFFFF] mt-[2px]">+91 8433700000</p>
             </div>
             <div
-              className="font-normal text-[24px] lg:text-[30px] leading-[35.55px] tracking-wider "
+              className="font-normal sm:text-[24px] lg:text-[30px] sm:leading-[35.55px] sm:tracking-wider "
               style={{ fontFamily: "Rubik Moonrocks" }}
             >
               JOURNEYONWHEEL
             </div>
-            <div className="flex gap-3 ">
-              <div className="flex gap-5 mr-10">
+            <div className="flex  gap-3 ">
+              {/* <div className="flex gap-5 mr-10">
                 <button
                   onClick={signUpHandler}
-                  className="py-3 px-10 rounded-full text-lg font-bold hover:scale-105 transition-all border border-black duration-300 bg-gray-200"
+                  className="hidden py-3 px-10 rounded-full text-lg font-bold hover:scale-105 transition-all border border-black duration-300 bg-gray-200"
                 >
                   Sign up
                 </button>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 >
                   Login{" "}
                 </button>
-              </div>
+              </div> */}
               <div
                 onClick={navHandler}
                 className="w-[20px] h-[20px] lg:w-[35.88px] lg:h-[35.88px] "
