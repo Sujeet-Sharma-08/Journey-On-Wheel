@@ -47,7 +47,7 @@ const Funfact = () => {
           <div className="flex justify-center w-full lg:w-[90%] xl:gap-16 mb-10 py-5 lg:py-6 rounded-lg bg-[#5eadf5]">
             {sets.map((set) => (
               <div key={set.id} className="flex flex-col ml-1 sm:flex-row justify-center items-center gap-1 lg:gap-3">
-                <div>
+                <div className="hover:scale-110 duration-300 transition-all">
                   <img
                     className="w-[3rem] lg:w-[5rem]"
                     src={set.icon}

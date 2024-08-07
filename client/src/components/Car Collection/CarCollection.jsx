@@ -13,7 +13,9 @@ import { FaRupeeSign } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdOutlinePayment } from "react-icons/md";
-import { FaCarSide } from "react-icons/fa";
+import Inclusion from "./Inclusion";
+import Exclusion from "./Exclusion";
+import TC from "./T&C";
 
 const SelectCar = () => {
   const CarCollections = [
@@ -55,17 +57,17 @@ const SelectCar = () => {
     {
       id: 1,
       heading: 'INCLUSION',
-      text:'Base Fare for 145 km / Driver Allowance'
+      text: <Inclusion/>
     },
     {
       id: 2,
       heading: 'EXCLUSION',
-      text: 'Tolls, Parking Fees, Interstate Taxes'
+      text: <Exclusion/>
     },
     {
       id: 3,
       heading: 'T&C',
-      text:'hello dude'
+      text:<TC/>
       
     },
   ];
@@ -83,61 +85,61 @@ const SelectCar = () => {
 
   return (
     <div className="w-full relative">
-      <div className="flex flex-col justify-center sm:flex-row gap-3 lg:gap-8 p-5 sm:p-10 h-[23rem] sm:h-[20rem] py-[6rem] sm:py-[9rem]  bg-[#ececec]">
+      <div className="flex flex-col justify-center sm:flex-row gap-3 lg:gap-8 p-5 sm:p-10 -mb-10 py-20 sm:h-[5rem] sm:py-[7rem]  bg-[#ececec]">
         <div className="w-full">
-          <p className="text-sm md:text-md sm:text-[1rem] leading-normal font-semibold">
+          <p className="text-sm sm:text-md leading-normal font-semibold">
             HOME - Select Car
           </p>
           <p className="md:text-lg">Bangalore - Mumbai (1 more City) - Madhya Pradesh (Round Trip)</p>
         </div>
 
-        <div className="w-full flex justify-end  gap-2 sm:gap-5">
-          <div className="flex gap-2 sm:gap-5">
-            <div className="md:text-lg">
+        <div className="w-full flex sm:justify-end h-3 gap-4 sm:gap-5">
+          <div className="flex gap-1 sm:gap-5">
+            <div className="text-sm md:text-md font-semibold">
               <p>Pick Up</p>
               <div>07/05/2024</div>
             </div>
-            <div className="mt-1 text-xl">
+            <div className="mt-1 text-sm md:text-md font-semibold">
               <FaCalendarAlt />
             </div>
-            <div className="hidden md:block w-[1px] bg-black"></div>
+            <div className="hidden md:block w-[1px] h-10 bg-black"></div>
           </div>
 
-          <div className="flex gap-2 sm:gap-5">
-            <div className="md:text-lg">
+          <div className="flex gap-1 sm:gap-5">
+            <div className="text-sm md:text-md font-semibold">
               <p>Return</p>
               <div>07/05/2024</div>
             </div>
-            <div className="mt-1 text-xl">
+            <div className="mt-1 text-sm md:text-md">
               <FaCalendarAlt />
             </div>
-            <div className="hidden md:block w-[1px] bg-black"></div>
+            <div className="hidden md:block w-[1px] h-10 bg-black"></div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-5">
-            <div className="md:text-lg">
+            <div className="text-sm md:text-md font-semibold">
               <p>Time</p>
               <div>10:30 PM</div>
             </div>
-            <button className="h-10 w-20 -ml-5  sm:ml-0 sm:w-28 text-center bg-[#0ba2f5] rounded-lg hover:scale-105 duration-300 transition-all font-semibold">
+            <button className="h-10 py-2 w-20 flex justify-center items-center -ml-5 text-sm md:text-md sm:ml-0 sm:w-28 text-center bg-[#0ba2f5] rounded-lg hover:scale-105 duration-300 transition-all font-semibold">
               Modify
             </button>
           </div>
         </div>
       </div>
 
-      <div className="w-11/12 mx-auto mb-10">
+      <div className="w-11/12 mx-auto mb-5">
         <div className="flex flex-col justify-center">
           {CarCollections.map((car) => (
             <div
               key={car.id}
-              className="bg-[#ececec] gap-10 py-9 mt-14 border border-black rounded-xl"
+              className="bg-[#ececec] gap-10 py-8 mt-14 border border-black rounded-xl"
             >
               <p className="text-xl font-bold -mt-5 ml-20">{car.Brand}</p>
               <div className="w-full h-[1px] mt-4 bg-black"></div>
-              <div className="flex flex-col sm:flex-row gap-10 border-t-slate-500">
+              <div className="flex flex-col sm:flex-row sm:-mt-5 gap-10 border-t-slate-500">
                 <div className="sm:w-[20rem] sm:ml-3 sm:h-[12rem] lg:w-1/3 lg:h-54 xl:h-64 flex justify-center items-center mt-4 sm:mt-10 lg:mt-16 ml-3 mr-3 border border-black bg-white rounded-md hover:scale-100 transition-all duration-300">
-                  <img className="" src={car.img} alt="Car" />
+                  <img className="w-full bg-cover h-full" src={car.img} alt="Car" />
                 </div>
 
                 <div className="py-10 lg:py-16 flex flex-col gap-5">
@@ -194,7 +196,7 @@ const SelectCar = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap justify-between p-4 lg:mt-2 -mt-10 gap-2 sm:gap-5">
+              <div className="flex flex-wrap justify-between p-4 lg:mt-2 -mt-10 -mb-5 gap-2 sm:gap-5">
                 <p className="text-md sm:text-[1.125rem]  font-semibold leading-normal">
                   {car.text}
                 </p>
@@ -215,11 +217,11 @@ const SelectCar = () => {
               </div>
 
               {viewMoreId === car.id && (
-                <div className="container mt-5 flex flex-col md:flex-row gap-2 mx-auto">
+                <div className="container  mt-5 -mb-5 flex flex-col sm:flex-row gap-2 mx-auto">
                   {Details.map((detail) => (
-                    <div key={detail.id} className="mb-4 w-full">
+                    <div key={detail.id} className="mb-1 w-full">
                       <div
-                        className={`py-2 text-center ml-2 mr-2 font-semibold border border-black ${
+                        className={`py-2 text-center ml-2 mr-2 font-semibold border rounded-md border-black ${
                           detailId === detail.id
                             ? "bg-blue-500 text-white"
                             : "bg-gray-200"
@@ -229,20 +231,12 @@ const SelectCar = () => {
                         {detail.heading}
                       </div>
                       {detailId === detail.id && (
-                        <div className="flex flex-col lg:flex-row gap-5 justify-center mt-5">
-                          <div className="flex gap-5">
-                            <MdOutlinePayment className="mt-1" />
+                        <div className="mt-5">
                             <p className="text-black font-semibold text-[1rem] leading-normal">
                               {detail.text}
                             </p>
                           </div>
-                          <div className="flex gap-5">
-                            <FaCarSide className="mt-1" />
-                            <p className="text-black font-semibold text-[1rem] leading-normal">
-                              Multiple pickups/drops
-                            </p>
-                          </div>
-                        </div>
+                       
                       )}
                     </div>
                   ))}

@@ -11,6 +11,7 @@ import Booking from './components/tour/Booking'
 import CarCollection from './components/Car Collection/CarCollection'
 import Contactus from './components/subNavBar/contactus'
 import Aboutus from './components/subNavBar/Aboutus'
+import Details from './components/Car Collection/Details'
 function App() {
   
   return (
@@ -28,6 +29,7 @@ function App() {
 
         {/* select car */}
         <Route path='/exploremore' element={<CarCollection/>}></Route>
+        <Route path='/details' element={<Details/>}/>
 
       {/* tour */}
          <Route path='/booking' element={<Booking/>}/>

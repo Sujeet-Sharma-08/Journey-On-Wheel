@@ -31,16 +31,16 @@ const Footer = () => {
               {/* socail icons */}
 
               <div className="hidden sm:flex gap-5 text-3xl mt-2 text-black">
-                <a className="text-[#25d366]" href="#">
+                <a className="hover:text-[#25d366] duration-300 transition-all" href="#">
                   <FaWhatsapp />
                 </a>
-                <a className="text-[#f25454]" href="#">
+                <a className="hover:text-[#f25454] duration-300 transition-all" href="#">
                   <FaInstagram />
                 </a>
-                <a className="text-red-600" href="#">
+                <a className="hover:text-red-600 duration-300 transition-all" href="#">
                   <FaYoutube />
                 </a>
-                <a className="text-white" href="#">
+                <a className="hover:text-white duration-300 transition-all" href="#">
                   <FaTwitter />
                 </a>
               </div>

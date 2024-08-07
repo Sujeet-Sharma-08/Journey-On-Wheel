@@ -34,7 +34,7 @@ const Experience = () => {
       <div className="w-11/12 mx-auto flex flex-col md:flex-row">
 
       {/* first div */}
-        <div className="flex justify-center w-full  lg:w-1/2">
+        <div className="flex justify-center w-full hover:scale-105 transition-all duration-300 lg:w-1/2">
           <img src={yellocar} alt="" />
         </div>
 
@@ -53,7 +53,7 @@ const Experience = () => {
                   key={service.id}
                   className="flex items-center text-black gap-5"
                 >
-                  <div className="flex justify-center w-[5.1rem] h-[3rem] md:w-32 md:h-20 lg:w-[5.5rem] lg:h-[5rem] xl:h-[5.5rem] bg-[#b9dee5] border-2 border-[#FF6D1F] rounded-full ">
+                  <div className="flex justify-center hover:scale-105 transition-all duration-300 w-[5.1rem] h-[3rem] md:w-32 md:h-20 lg:w-[5.5rem] lg:h-[5rem] xl:h-[5.5rem] bg-[#b9dee5] border-2 border-[#FF6D1F] rounded-full ">
                     <img className="w-[2rem] md:w-[2.2rem]" src={service.icon} width={36} alt="services-icons" />
                   </div>
 

@@ -95,7 +95,7 @@ const Services = () => {
         <div className="grid md:flex grid-cols-1 md:grid-cols-3  justify-center gap-2 lg:gap-10">
 
           {/* first card */}
-          <div className="w-full  lg:w-[23rem] lg:h-[34rem] bg-[#f4f5f0] rounded-2xl border hover:border-2 hover:rounded-3xl transition duration-300 hover:border-blue-500 ">
+          <div className="w-full  lg:w-[23rem] lg:h-[34rem] bg-[#f4f5f0] hover:scale-105 rounded-2xl border hover:border-2 hover:rounded-3xl transition duration-300 hover:border-blue-500 ">
             <img src={Roundtrips} alt="" />
             <p className="text-xl text-center font-semibold mt-5 text-[#5eadf5]">
               ROUNDTRIPS CABS

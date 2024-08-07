@@ -35,13 +35,13 @@ const SignUp = () => {
   return (
     <div className="w-full flex justify-center items-center relative">
       <div className="w-11/12 mx-auto flex justify-center mb-10">
-      <div className="absolute w-[18rem] h-[18rem] rounded-full  mt-[7rem]  -z-10 -ml-[80rem] bg-[#5eadf5]"></div>
-        <div className="flex justify-center items-center border border-black bg-[#ffffff] shadow-xl rounded-3xl max-w-7xl h-[35rem] mt-[12rem] mb-10">
-          <div className="w-[52rem] flex flex-col justify-center items-center">
+      <div className="absolute w-[18rem] h-[18rem] rounded-full mt-[7rem] -z-10 -ml-[80rem] bg-[#5eadf5]"></div>
+        <div className="flex justify-center items-center border border-black bg-[#ffffff] shadow-xl rounded-3xl h-[35rem] mt-[12rem] mb-10">
+          <div className="w-full sm:w-[60rem] md:w-[40rem] flex flex-col justify-center items-center">
             <h2 className="text-[1.586rem] mb-2 font-bold text-black text-center leading-normal">
               SIGN UP
             </h2>
-            <p className="text-black text-[1rem] flex justify-center font-medium leading-normal -mt-2 mb-3 tracking-widest">
+            <p className="text-black text-[1rem] flex justify-center text-center font-medium leading-normal -mt-2 mb-3 tracking-widest">
               Welcome, please sign up to start your journey
             </p>
 
@@ -59,7 +59,7 @@ const SignUp = () => {
                   id="name"
                   value={formData.name}
                   onChange={changeHandler}
-                  className="py-3 px-3 w-[25rem] border border-black rounded-lg"
+                  className="py-3 px-3 w-[16rem] mx-auto sm:w-[24rem] xl:w-[32rem] border border-black rounded-lg"
                   placeholder="Name"
                 />
               </div>
@@ -74,7 +74,7 @@ const SignUp = () => {
                   id="phone"
                   value={formData.phone}
                   onChange={changeHandler}
-                  className="py-3 px-3 w-[25rem] border border-black rounded-lg"
+                  className="py-3 px-3 w-[16rem] mx-auto sm:w-[24rem] xl:w-[32rem] border border-black rounded-lg"
                   placeholder="Contact"
                 />
               </div>
@@ -93,7 +93,7 @@ const SignUp = () => {
                   id="email"
                   value={formData.email}
                   onChange={changeHandler}
-                  className="py-3 px-3 w-[25rem] border border-black rounded-lg"
+                  className="py-3 px-3 w-[16rem] mx-auto sm:w-[24rem] xl:w-[32rem] border border-black rounded-lg"
                   placeholder="E-mail"
                 />
               </div>
@@ -108,29 +108,29 @@ const SignUp = () => {
                   id="password"
                   value={formData.password}
                   onChange={changeHandler}
-                  className="py-3 px-3 w-[25rem] border border-black rounded-lg"
+                  className="py-3 px-3 w-[16rem] mx-auto sm:w-[24rem] xl:w-[32rem] border border-black rounded-lg"
                   placeholder="Password"
                 />
                 {showPassword ? (
                   <RxEyeOpen
                     onClick={passwordHandler}
-                    className=" absolute mt-12 ml-[22rem] text-xl"
+                    className=" absolute mt-12 ml-[14rem] sm:ml-[22rem] text-xl"
                   />
                 ) : (
                   <GoEyeClosed
                     onClick={passwordHandler}
-                    className=" absolute mt-12 ml-[22rem] text-xl"
+                    className=" absolute mt-12 ml-[14rem] sm:ml-[22rem] text-xl"
                   />
                 )}
               </div>
 
               <button
                 type="submit"
-                className="py-2 px-3 w-[25rem] text-[1.2rem] font-bold mt-5 mb-5 border hover:scale-105 transition-all shadow-xl duration-300 border-black rounded-lg bg-[#5eadf5]"
+                className="py-3 px-3 w-[16rem] mx-auto sm:w-[24rem] xl:w-[32rem] border  text-[1.2rem] font-bold mt-5 mb-5  hover:scale-105 transition-all shadow-xl duration-300 border-black rounded-lg bg-[#5eadf5]"
               >
                 Sign Up
               </button>
-              <p className="-mt-3 mr-40">
+              <p className="-mt-3 sm:mr-40">
                 Already have an account?{" "}
                 <Link className="text-blue-500 font-semibold" to="/login">
                   Login
@@ -139,7 +139,7 @@ const SignUp = () => {
             </form>
           </div>
 
-          <div className="h-[35rem] w-[48rem] ">
+          <div className="hidden sm:block h-[35rem] justify-center items-center border border-black shadow-xl rounded-3xl  md:max-w-[45rem] lg:max-w-4xl xl:max-w-7xl  ">
             <img
               className="w-full h-full bg-cover"
               src={SignupImage}
@@ -148,7 +148,7 @@ const SignUp = () => {
           </div>
         </div>
         <div className="absolute w-14 h-14 bg-[#5eadf5] mt-[47.3rem] mr-[42rem] rounded-full "></div>
-        <div className="bg-[#5eadf5] "></div>
+       
       </div>
     </div>
   );
