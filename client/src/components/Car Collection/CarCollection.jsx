@@ -16,6 +16,7 @@ import { MdOutlinePayment } from "react-icons/md";
 import Inclusion from "./Inclusion";
 import Exclusion from "./Exclusion";
 import TC from "./T&C";
+import { useNavigate } from "react-router";
 
 const SelectCar = () => {
   const CarCollections = [
@@ -82,7 +83,10 @@ const SelectCar = () => {
   const viewMoreHandler = (id) => {
     setViewMoreId(viewMoreId === id ? null : id);
   };
-
+const navigate = useNavigate();
+  const handleBooking=()=>{
+    navigate('/booking')
+  }
   return (
     <div className="w-full relative">
       <div className="flex flex-col justify-center sm:flex-row gap-3 lg:gap-8 p-5 sm:p-10 -mb-10 py-20 sm:h-[5rem] sm:py-[7rem]  bg-[#ececec]">
@@ -188,7 +192,7 @@ const SelectCar = () => {
                       </div>
                       <p className="font-semibold  text-md mt-1">up to 140 km</p>
                     </button>
-                    <button className="lg:block bg-[#0ba2f5] w-full h-16 lg:w-[31.4rem] lg:h-20 sm:text-xl font-bold shadow-2xl text-center rounded-md lg:hover:scale-110 transition-all">
+                    <button onClick={handleBooking} className="lg:block bg-[#0ba2f5] w-full h-16 lg:w-[31.4rem] lg:h-20 sm:text-xl font-bold shadow-2xl text-center rounded-md lg:hover:scale-110 transition-all">
                       BOOK NOW{" "}
                       <FaLongArrowAltRight className="inline ml-0 sm:ml-2 w-6 h-6 -mt-1" />
                     </button>

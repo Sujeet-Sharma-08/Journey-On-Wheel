@@ -9,7 +9,7 @@ const ExploreCabs = () => {
   };
 
   return (
-    <div className="flex flex-col ml-2 mr-2 mt-10 sm:mt-[9.8rem]">
+    <div className="flex flex-col ml-2 mr-2 mt-[2rem] sm:mt-[13rem] md:mt-[7rem] lg:mt-[12rem]">
       <div className="w-10/12 mx-auto flex flex-col justify-center bg-[#F4F5F0] items-center border-2 mb-5 rounded-3xl shadow-2xl border-black p-5">
         <div className="flex justify-center items-center border-2 rounded-md border-black shadow-2xl">
           <div className="container grid grid-cols-3 bg-gray-300 rounded-md w-[15rem] sm:w-[27rem] mx-auto">

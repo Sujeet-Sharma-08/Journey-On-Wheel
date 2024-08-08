@@ -33,11 +33,11 @@ const SignUp = () => {
   };
 
   return (
-    <div className="w-full flex justify-center items-center relative">
+    <div className="w-full relative">
       <div className="w-11/12 mx-auto flex justify-center mb-10">
-      <div className="absolute w-[18rem] h-[18rem] rounded-full mt-[7rem] -z-10 -ml-[80rem] bg-[#5eadf5]"></div>
-        <div className="flex justify-center items-center border border-black bg-[#ffffff] shadow-xl rounded-3xl h-[35rem] mt-[12rem] mb-10">
-          <div className="w-full sm:w-[60rem] md:w-[40rem] flex flex-col justify-center items-center">
+      <div className="absolute w-[10rem] h-[10rem] mt-[4rem] sm:mt-[6rem] -ml-[20rem] sm:w-[14rem] sm:h-[14rem] lg:w-[18rem] lg:h-[18rem] rounded-full sm:-ml-[42rem] lg:-ml-[60rem] lg:mt-[6rem] xl:-ml-[80rem]  xl:mt-[6rem] -z-10 bg-[#5eadf5]"></div>
+        <div className="flex justify-center items-center border border-black bg-[#ffffff] shadow-xl rounded-3xl h-[35rem] mt-[7rem] sm:mt-[11rem] mb-10">
+          <div className="w-full sm:w-[60rem] md:w-[40rem] lg:w-[50rem] flex flex-col justify-center items-center">
             <h2 className="text-[1.586rem] mb-2 font-bold text-black text-center leading-normal">
               SIGN UP
             </h2>

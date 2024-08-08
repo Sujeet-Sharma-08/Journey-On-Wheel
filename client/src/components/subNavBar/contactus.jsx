@@ -103,7 +103,7 @@ const contactus = () => {
                   required
                   placeholder="Message"
                 ></textarea>
-                <button className="py-3 bg-black text-white font-semibold rounded-lg hover:scale-110 transition-all duration-300">
+                <button className="py-3 bg-black text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300">
                   SEND
                 </button>
               </form>

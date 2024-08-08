@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { FaIndianRupeeSign } from "react-icons/fa6";
 
 const Booking = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,10 @@ const Booking = () => {
           <h2 className="text-black py-5 lg:-mt-28 sm:text-[1.75rem] text-xl font-bold leading-normal">
             Contact & Pickup Details
           </h2>
-          <form className="flex flex-col gap-10 p-2 -mt-10" onSubmit={handleSubmit}>
+          <form
+            className="flex flex-col gap-10 p-2 -mt-10"
+            onSubmit={handleSubmit}
+          >
             <div className="flex flex-col sm:flex-row gap-5 lg:gap-10 xl:gap-14">
               <div className="flex">
                 <label htmlFor="name" className="sm:text-lg font-semibold">
@@ -161,34 +165,49 @@ const Booking = () => {
           </h2>
           <div className="flex flex-col justify-start gap-5 mt-10 ml-3 ">
             <div className="flex lg:gap-20">
-              <p className="font-semibold text-black text-md sm:text-lg">Iternary :</p>
+              <p className="font-semibold text-black text-md sm:text-lg">
+                Iternary :
+              </p>
               <p className="font-semibold ml-3 text-black text-md sm:text-lg">
                 Mumbai to Rajasthan
               </p>
             </div>
 
             <div className="flex lg:gap-20">
-              <p className="font-semibold text-black text-md sm:text-lg">Pickup Date:</p>
+              <p className="font-semibold text-black text-md sm:text-lg">
+                Pickup Date:
+              </p>
               <p className="font-semibold sm:ml-3 text-black text-md sm:text-lg">
                 25th July 2024 at 9:00 AM
               </p>
             </div>
 
             <div className="flex lg:gap-20">
-              <p className="font-semibold text-black text-md sm:text-lg">Car Type :</p>
+              <p className="font-semibold text-black text-md sm:text-lg">
+                Car Type :
+              </p>
               <p className="font-semibold ml-3 text-black text-md sm:text-lg">
                 Ertiga or Equivalant
               </p>
             </div>
 
             <div className="flex lg:gap-20">
-              <p className="font-semibold text-black text-md sm:text-lg">KMs Included :</p>
-              <p className="font-semibold text-black ml-3 text-md sm:text-lg">140 KM</p>
+              <p className="font-semibold text-black text-md sm:text-lg">
+                KMs Included :
+              </p>
+              <p className="font-semibold text-black ml-3 text-md sm:text-lg">
+                140 KM
+              </p>
             </div>
 
             <div className="flex lg:gap-20 mb-5">
-              <p className="font-semibold text-blacktext-md sm:text-lg">Total Fare :</p>
-              <p className="font-semibold text-black ml-5  text-md sm:text-lg">2489</p>
+              <p className="font-semibold text-blacktext-md sm:text-lg">
+                Total Fare :
+              </p>
+              <div className="flex font-semibold text-black ml-5  text-md sm:text-lg">
+                <FaIndianRupeeSign className="mt-1" />
+                <p>2489</p>
+              </div>
             </div>
           </div>
         </div>
