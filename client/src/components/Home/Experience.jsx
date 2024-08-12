@@ -30,19 +30,20 @@ const Services = [
 const Experience = () => {
   return (
     <div className=" experience w-full mt-5">
-        
       <div className="w-11/12 mx-auto flex flex-col md:flex-row">
-
-      {/* first div */}
+        {/* first div */}
         <div className="flex justify-center w-full hover:scale-105 transition-all duration-300 lg:w-1/2">
           <img src={yellocar} alt="" />
         </div>
 
         {/* second div */}
         <div className="w-full lg:w-1/2">
-          <p className="text-black group font-semibold text-2xl md:text-4xl lg:text-6xl">
+          <p className="text-black group font-semibold text-2xl md:text-4xl lg:text-5xl">
             Feel The Best Experience{" "}
-            <span className="text-[#5EADF5] hover:scale-105 transition duration-300">With</span> Our Rental Deals
+            <span className="text-[#5EADF5] hover:scale-105 transition duration-300">
+              With
+            </span>{" "}
+            Our Rental Deals
           </p>
 
           {/* map on Services */}
@@ -54,7 +55,12 @@ const Experience = () => {
                   className="flex items-center text-black gap-5"
                 >
                   <div className="flex justify-center hover:scale-105 transition-all duration-300 w-[5.1rem] h-[3rem] md:w-32 md:h-20 lg:w-[5.5rem] lg:h-[5rem] xl:h-[5.5rem] bg-[#b9dee5] border-2 border-[#FF6D1F] rounded-full ">
-                    <img className="w-[2rem] md:w-[2.2rem]" src={service.icon} width={36} alt="services-icons" />
+                    <img
+                      className="w-[2rem] md:w-[2.2rem]"
+                      src={service.icon}
+                      width={36}
+                      alt="services-icons"
+                    />
                   </div>
 
                   <div className="flex flex-col gap-1">
@@ -71,7 +77,6 @@ const Experience = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
